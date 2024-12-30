@@ -35,7 +35,7 @@ jobs:
               run: |
                 BRANCH_NAME="I am a branch!"
                 if [ -n "${{ inputs.branch }}" ]; then
-                    BRANCH_NAME=${inputs.branch}
+                    BRANCH_NAME=${{inputs.branch}}
                     if [[ $BRANCH_NAME == "main" ]]; then
                         BRANCH_NAME="I am main!"
                     fi
