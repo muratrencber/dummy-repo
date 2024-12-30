@@ -18,14 +18,12 @@ on:
             required: false
             type: string
             default: ""
-permissions:
-  contents: write
 jobs:
     checkout:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout
-              uses: actions/checkout@v2
+              uses: actions/checkout@v3
             - name: Copy {target_folder} to {target_folder}_copied
               run: |
                 rm -rf ${{ inputs.target_folder }}_copied
