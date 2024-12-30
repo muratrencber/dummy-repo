@@ -1,0 +1,13 @@
+name: Push test
+on:
+  push:
+    branches:
+      - main
+jobs:
+    test:
+        uses: ./.github/workflows/generic-use.yml
+        with:
+            target_folder: "test"
+            meta_path: "test-meta.json"
+            branch: "main"
+            echo_arguments: "Very Cool!"
