@@ -19,7 +19,7 @@ on:
             type: string
             default: ""
 permissions:
-    contents: write
+    contents: write 
 jobs:
     checkout:
         runs-on: ubuntu-latest
